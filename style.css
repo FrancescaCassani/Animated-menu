@@ -1,0 +1,115 @@
+/* Reset*/
+body {
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Bangers', cursive;
+    background: #cecece;
+    max-width: 900px;
+
+}
+
+/* Utilities */
+.showCircle, 
+#hamb-menu {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#hamb-menu {
+    width: 40px;
+    height: 35px;
+    margin: 50px 20px 20px 50px;
+    cursor: grabbing;
+    z-index: 3;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background: black;
+    display: block;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+#bar1 {
+    transform: translateY(-5px);
+}
+#bar3 {
+    transform: translateY(5px);
+}
+
+.nav {
+    display: none;
+    margin-left: -34px;
+    transition: .4s ease;
+}
+
+.nav li { 
+    list-style: none;
+    padding: 13px 0;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+}
+
+
+/* Change al click BARS*/
+.change .bar {
+    background: black;
+}
+
+.change #bar1 {
+    transform: translateY(3px) rotate(-45deg);
+}
+
+.change #bar2 {
+    opacity: 0;
+}
+
+.change #bar3 {
+    transform: translateY(-6px) rotate(45deg);
+}
+
+/* Appear side hidden menu */
+.change {
+    display: block;
+}
+
+/* Side circle */
+.circle {
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffd530, #f8cc1e);
+    transition: .4s ease;
+}
+
+.showCircle {
+    width: 650px;
+    height: 640px;
+    transform: translate(-60%, -25%);
+    animation: bobble 2s linear infinite;
+}
+
+/* Animation */
+@keyframes bobble {
+    0%   {right: 0px;}
+    25%  {left: 40px;}
+    50%  {right: 60px;}
+    75%  {left: 70px;}
+    100% {right: 0px;}
+}
+
+
+
+
+
+
